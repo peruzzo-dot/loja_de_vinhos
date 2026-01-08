@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Header: Estiliza a caixa do topo */
+header {
+    background-color: #4A0E0E; /* Vermelho Borgonha realista */
+    color: #F5F5DC;            /* Bege creme para leitura fácil */
+    padding: 30px;
+    text-align: center;
+}
+
+/* 3. Menu: Organiza a lista de vinhos */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 20px;              /* Espaço entre os itens do menu */
+    font-weight: bold;
+    text-transform: uppercase;   /* Deixa tudo em MAIÚSCULO (cara de site chique) */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* O efeito :hover para os itens do menu */
+nav ul li:hover {
+    color: #FFFFFF;            /* Muda para branco puro ao passar o mouse */
+    transform: scale(1.1);       /* Dá um leve zoom na palavra */
+}
+
+/* 4. Vitrine: Espaçamento para os produtos */
+.vitrine {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+/* 5. Card do Vinho: O quadro com borda dourada */
+.vinho-card {
+    background-color: white;
+    border: 2px solid #D4AF37; /* Dourado luxo */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 280px;
+    transition: 0.4s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Efeito de flutuar ao passar o mouse no card */
+.vinho-card img{
+    height: 300px;        /* Mantém as garrafas com a mesma altura */
+    object-fit: contain;  /* Não deixa a imagem distorcer */
+    margin-bottom: 15px;
+}
+
+/* Configuração de Fontes Globais */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfcfb; /* Um bege quase branco, muito elegante */
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Deixando o Botão Profissional */
+.btn-comprar {
+    text-decoration: none;
+    background-color: #4A0E0E; /* Borgonha */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 50px; /* Botão arredondado é mais moderno */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    font-weight: bold;
+    transition: 0.3s;
+    width: 90%; /* Botão ocupa a largura do card */
+    margin-top: 10px;
+    }
+
+    .btn-comprar:hover {
+        background-color: #D4AF37; /* Muda para Dourado */
+        color: #4A0E0E;
+        transform: scale(1.05);
+    }
+
+    /* Ajuste no Preço */
+    .preco {
+        font-size: 1.5rem;
+        color: #4A0E0E;
+        font-weight: 700;
+        display: block;
+        margin: 10px 0;
+    }
+
+    footer {
+        background-color: #4A0E0E;
+        color: #F5F5DC;
+        text-align: center;
+        padding: 40px;
+        margin-top: 50px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        background-color: #4A0E0E; /* O mesmo Borgonha do cabeçalho */
+        color: #F5F5DC;       /* Um tom de bege suave para as letras */
+        text-align: center;
+        padding: 40px 20px;
+        margin-top: 60px;       /* Espaço entre os vinhos e o rodapé */     
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    footer hr {
+        border: 0;
+        border-top: 1px solid rgba(245, 245, 220, 0.2);
+        margin: 20px auto;
+        width: 50%;
+    }
+
+    .aviso-legal {
+        font-weight: bold;
+        color: #D4AF37; /* Dourado para o aviso importante */
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+
+    .banner {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                    url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 550px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;            
+    }
+
+    .banner-content h1 {
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        font-size: 3rem;
+        margin-bottom: 10px; 
+    }
+
+    .btn-banner {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 30px;
+        background-color: #D4AF37;
+        color: #4A0E0E;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .btn-banner:hover {
+        background-color: white;
+    }

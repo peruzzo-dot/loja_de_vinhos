@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Aroma & Tanino</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body style="background-color: #fdfcfb; font-family: sans-serif; padding: 40px;">
+    <div style="max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h2 style="color: #4A0E0E; text-align: center;">Finalizar Pagamento</h2>
+        <p style="font-weight: bold; margin-top: 20px;">Escolha a forma de pagamento:</p>
+    </div>
+    </body>
+
+    <label style="display: flex; padding: 15px; border: 1px solid #ddd; border-radius: 10px; margin-top: 15px; cursor: pointer;">
+        <input type="radio" name="pagamento" value="pix" style="margin-right: 15px;">
+        <span>💠 PIX (5% de desconto)</span>
+    </label>
+
+    <label style="display: flex; padding: 15px; border: 1px solid #ddd; border-radius: 10px; margin-top: 10px; cursor: pointer;">
+        <input type="radio" name="pagamento" value="cartao" style="margin-right: 15px;">
+        <span>💳 Cartão de Crédito</span>
+    </label>
+
+    <button onclick="irProxima()" style="width: 100%; padding: 15px; background: #4A0E0E; color: white; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 25px;">
+        IR PARA A PRÓXIMA PARTE
+    </button>
+</div>
+<script>function irProxima() {
+    const opcoes = document.getElementsByName('pagamento');
+    let selecionado = false;
+    for(let o of opcoes) if(o.checked) selecionado = true;
+     }
+     
+     if (selecionado) {
+         alert("Redirecionando para os dados finais...");
+       } else {
+             alert("Selecione uma forma de pagamento!");
+             }
+             
+             </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Vinho Malbec - Aroma & Tanino</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+<body>
+    <main style="display: flex; gap: 40px; padding: 40px; max-width: 1100px; margin: auto align-items: flex-start;">
+        <div style="flex: 1;">
+            <img src="img/vinho1.jpg" alt="Vinho Malbec" style="width: 100%; border-radius: 10px;">
+        </div>
+
+        <div style="flex: 1; font-family: sans-serif;">
+            <h1 style="color: #4A0E0E;">Malbec Clássico Argentino</h1>
+            <p style="font-size: 24px; font-weight: bold; color: #4A0E0E;">R$ 120,00</p>
+            <p style="margin: 20px 0; line-height: 1.6;">Um vinho tinto encorpado e elegante, com notas de frutas vermelhas e carvalho. Ideal para acompanhar carnes e massas.</p>
+        </div>
+
+        <div style="background: #f4f4f4; padding: 20px; border-radius: 8px;">
+            <p style="margin-bottom: 10px;">Calcular frete e prazo:</p>
+            <input type="text" id="cep" placeholder="00000-000" style="padding: 10px;">
+            <button onclick="calcularFrete()" style="padding: 10px; background: #000; color: #fff; cursor: pointer;">CALCULAR</button>
+            <p id="resultado-frete" style="margin-top: 10px; color: green; font-weight: bold;"></p>
+        </div>
+        <a href="checkout.html" class="btn-comprar" style="text-decoration: none; margin-top: 30px; display: flex; justify-content: center;">Finalizar Compra</a>
+       </div>   
+</main>
+<script>
+    function calcularFrete() {
+        const cepDigitado = document.getElementById('cep').value;
+        const campoResultado = document.getElementById('resultado-frete');
+        
+        // Verifica se o CEP tem pelo menos 8 dígitos (padrão brasileiro)
+            if (cepDigitado.length >= 8) {
+            campoResultado.innerHTML = "🚚 Frete para o CEP " + cepDigitado + ": R$ 15,00 (Entrega em 3 dias)";
+            campoResultado.style.color = "green";
+                } else {
+                campoResultado.innerHTML = "❌ Por favor, digite um CEP válido (8 números).";
+                campoResultado.style.color = "red";
+                }
+    }
+</script>
+    
+</body>
+</html>
