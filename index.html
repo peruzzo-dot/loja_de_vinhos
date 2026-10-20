@@ -3,72 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aroma e Tanino - Loja de Vinhos</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="Empório Aroma & Tanino: vinhos, espumantes, queijos coloniais, salames, castanhas e pães de fermentação longa. Projeto de demonstração.">
+    <title>Empório Aroma e Tanino - Vinhos, queijos, salames e pães</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel="stylesheet" href="style.css">
+    <script src="js/seguranca.js"></script>
+    <script src="js/idade.js"></script>
 </head>
 <body>
+
     <header>
-        <h1>Aroma & Tanino</h1>
-        <nav>
-        <ul>
-            <li>Tintos</li>
-            <li>Brancos</li>
-            <li>Contato</li>
-        </ul>
+        <a href="index.html" class="logo">Empório Aroma &amp; Tanino</a>
+        <button type="button" class="btn-carrinho" id="abrir-carrinho" aria-label="Abrir meu pedido">
+            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+            <span class="contador-carrinho">0</span>
+        </button>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html?categoria=vinho#vitrine">Vinhos</a></li>
+                <li><a href="index.html?categoria=queijo#vitrine">Queijos</a></li>
+                <li><a href="index.html?categoria=salame#vitrine">Salames</a></li>
+                <li><a href="index.html?categoria=pao#vitrine">Pães</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </nav>
     </header>
+
     <section class="banner">
         <div class="banner-content">
-            <h1>Coleção de Inverno 2026</h1>
-            <p>Vinhos selecionados com até 20% de desconto.</p>
-            <a href="#vitrine" class="btn-banner">Explorar Seleção</a>
+            <h1>Tradição italiana à sua mesa</h1>
+            <p>Vinhos, queijos coloniais, salames, castanhas e pães de fermentação longa.</p>
+            <a href="#vitrine" class="btn-banner">Explorar seleção</a>
         </div>
     </section>
+
+    <div class="faixa">
+        <span>Raízes italianas</span>
+        <span>Produtos artesanais</span>
+        <span>Pedido pelo WhatsApp</span>
+    </div>
+
     <main>
-        <section class="vitrine">
-            <div class="vinho-card">
-                <img src="img/vinho1.jpg" alt="Vinho Malbec Argentino">
-                <h2 style="font-size: 1.2rem; margin: 10px 0;">Malbec Clássico</h2>
-                <p style="font-size: 0.9rem; color: #666;">Um vinho tinto encorpado.</p>
-                <span class="preco" style="font-size: 1.1rem; font-weight: bold;">R$ 120,00</span>
-                <a href="produtos-malbec.html" class="btn-comprar">
-                    <span class="material-symbols-outlined">shopping_cart
-                        
-                    </span>
-                    Comprar agora
-                </a>
-                </div>
-        
-        <div class="vinho-card">
-            <img src="img/vinho2.jpg" alt="Vinho Reserva da Casa">
-            <h2 style="font-size: 1.2rem; margin: 10px 0;">Reserva da Casa</h2>
-            <p style="font-size: 0.9rem; color: #666;">Um vinho exclusivo e selecionado.</p>
-            <span class="preco" style="font-size: 1.1rem; font-weight: bold;">R$ 98,50</span>
-            <a href="produtos-reserva.html" class="btn-comprar">
-                <span class="material-symbols-outlined">shopping_cart
-                    
-                
-                </span>
-                Comprar agora
-            </a>
-        </div>
+        <section class="catalogo" id="vitrine">
+            <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoria"></div>
+            <div id="vitrine-lista"></div>
         </section>
     </main>
-    <footer>
+
+    <footer id="contato">
         <div class="footer-content">
-            <p><strong>Aroma & Tanino</strong> - Boutique de Vinhos Selecionados<p>
-            <p>Site de Vendas, RS</p>
+            <p><strong>Empório Aroma &amp; Tanino</strong> - Tradição italiana à mesa</p>
+            <p>Porto Alegre, RS</p>
             <p>Siga-nos: @aromaetanino</p>
-            <hr> <p class="aviso-legal">Beba com moderação. Venda proibida para menores de 18 anos.</p>
+            <hr>
+            <p class="aviso-legal">Beba com moderação. Venda proibida para menores de 18 anos.</p>
+            <p class="aviso-demo-rodape">Projeto de demonstração: produtos, preços e contatos fictícios.</p>
         </div>
     </footer>
+
+    <a class="whats-flutuante" href="#" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+        <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+    </a>
+
+    <script src="js/whatsapp.js" defer></script>
+    <script src="js/produtos.js" defer></script>
+    <script src="js/carrinho.js" defer></script>
+    <script src="js/vitrine.js" defer></script>
 </body>
 </html>
-
-<script>
-    function adicionarAoCarrinho() {
-        alert("🍷 Excelente escolha! O vinho foi adicionado ao seu carrinho.");
-    }
-</script>
